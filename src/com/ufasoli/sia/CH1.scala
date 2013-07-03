@@ -8,6 +8,11 @@ object CH1{
     loopTill (i > 0) {
       println(i)
       i -= 1
+
+
+      val name ="toto"
+      println(name.exists(_.isUpper))
+
   }
 
 def loopTill(cond: => Boolean)(body: => Unit): Unit = {
