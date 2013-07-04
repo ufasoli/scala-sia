@@ -20,5 +20,27 @@ object ArraysAndList{
 
     myList.foreach(println)
 
+    // manipulating collections
+    val oldList = List(1,2)
+
+    oldList.foreach(println)
+
+    // create a new list by adding the element '3' at the end of the oldList
+    val newList = 3 :: oldList
+    newList.foreach(println)
+
+    // create a new list by adding the element '3' at the begining of the oldList
+    val newList2 = oldList :+ 3
+    newList2.foreach(println)
+
+    // using the Nil object to create List
+    val myList2 = "This" :: "is" :: "immutable" :: Nil
+    myList2.foreach(println)
+
+
+    // delete the 3rd element from the newList2 object
+    val afterDelete = newList2.filterNot(_ ==3)
+    afterDelete.foreach(println)
+
   }
 }
