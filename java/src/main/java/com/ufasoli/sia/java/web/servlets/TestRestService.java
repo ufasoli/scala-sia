@@ -26,6 +26,8 @@ public class TestRestService extends HttpServlet{
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("CALLING GET");
+
         PrintWriter out = response.getWriter();
         out.println("Get method called");
         out.println("parameters: " + parameters(request));
