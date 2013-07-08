@@ -58,12 +58,15 @@ object HttpClient {
 
     val responseBody = new DefaultHttpClient().execute(httpPost, new BasicResponseHandler())
 
+    println(responseBody)
   }
 
   def handleDeleteRequest(params: Map[String, List[String]], url: String) {
 
     val httpDelete  = new HttpDelete(url)
     headers(params.get("-h").get).foreach {httpDelete.addHeader(_)}
+    val responseBody = new DefaultHttpClient().execute(httpDelete, new BasicResponseHandler())
+    println(responseBody)
   }
 
   def handleOptionsRequest(params: Map[String, List[String]], url: String) {

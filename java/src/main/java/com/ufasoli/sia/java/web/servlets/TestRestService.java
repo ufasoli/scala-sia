@@ -51,6 +51,25 @@ public class TestRestService extends HttpServlet{
         out.println("Delete method called");
     }
 
+
+    @Override
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        out.println("Post method called");
+        out.println("parameters : " + parameters(request));
+        out.println("headers: " + headers(request));
+    }
+
+
+    @Override
+    protected void doOptions(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        PrintWriter out = response.getWriter();
+        out.println("Allow : POST,DELETE,PUT,GET,OPTIONS");
+
+
+    }
+
     private String parameters(HttpServletRequest request) {
         StringBuilder builder = new StringBuilder();
         for (Enumeration e = request.getParameterNames(); e.hasMoreElements(); ) {
