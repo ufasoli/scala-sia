@@ -55,7 +55,7 @@ public class TestRestService extends HttpServlet{
     @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.println("Post method called");
+        out.println("PUT method called");
         out.println("parameters : " + parameters(request));
         out.println("headers: " + headers(request));
     }
