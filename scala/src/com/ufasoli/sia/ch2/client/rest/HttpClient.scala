@@ -15,6 +15,10 @@ import org.apache.http.message._
 import org.apache.http.params._
 
 object HttpClient {
+
+
+
+
   def main(args: Array[String]) {
 
     require(args.size >= 2, "at minimum you should specify action (post, get,delete,options) and url")
@@ -33,6 +37,7 @@ object HttpClient {
       case "post" => handlePostRequest(params, url)
       case "delete" => handleDeleteRequest(params, url)
       case "options" => handleOptionsRequest(params, url)
+      case "put" => handlePutRequest(params,url)
     }
 
   }
@@ -44,7 +49,7 @@ object HttpClient {
     val httpGet = new HttpGet(s"$url?$queryParams")
 
     headers(params.get("-h").get).foreach(httpGet.addHeader(_))
-     println(httpGet.getURI)
+    println(httpGet.getURI)
     val responseBody = new DefaultHttpClient().execute(httpGet, new BasicResponseHandler())
     println(responseBody)
 
@@ -53,7 +58,9 @@ object HttpClient {
   def handlePostRequest(params: Map[String, List[String]], url: String) {
 
     val httpPost = new HttpPost(url)
-    headers(params.get("-h").get).foreach {httpPost.addHeader(_)}
+    headers(params.get("-h").get).foreach {
+      httpPost.addHeader(_)
+    }
     httpPost.setEntity(formEntity(params))
 
     val responseBody = new DefaultHttpClient().execute(httpPost, new BasicResponseHandler())
@@ -63,14 +70,34 @@ object HttpClient {
 
   def handleDeleteRequest(params: Map[String, List[String]], url: String) {
 
-    val httpDelete  = new HttpDelete(url)
-    headers(params.get("-h").get).foreach {httpDelete.addHeader(_)}
+    val httpDelete = new HttpDelete(url)
+    headers(params.get("-h").get).foreach {
+      httpDelete.addHeader(_)
+    }
     val responseBody = new DefaultHttpClient().execute(httpDelete, new BasicResponseHandler())
     println(responseBody)
   }
 
   def handleOptionsRequest(params: Map[String, List[String]], url: String) {
 
+    val httpOptions = new HttpOptions(url)
+    headers(params.get("-h").get).foreach {
+      httpOptions.addHeader(_)
+    }
+    val httpResponse = new DefaultHttpClient().execute(httpOptions, new BasicResponseHandler())
+    println(httpResponse)
+  }
+
+
+  def handlePutRequest(params: Map[String, List[String]], url: String) {
+
+    val httpPut = new HttpPut(url)
+    headers(params.get("-h").get).foreach {httpPut.addHeader(_)}
+    httpPut.setEntity(formEntity(params))
+
+    val httpResponse = new DefaultHttpClient().execute(httpPut, new BasicResponseHandler())
+
+    println(httpResponse)
   }
 
 
@@ -81,12 +108,12 @@ object HttpClient {
       //Arrays.asList method; otherwise, asList will create a Java List with one element.
       java.util.Arrays.asList(scalaList.toArray: _*)
     }
-    def formParams = for(nameValue <- params("-d")) yield {
+    def formParams = for (nameValue <- params("-d")) yield {
       def tokens = splitByEqual(nameValue)
       new BasicNameValuePair(tokens(0), tokens(1))
     }
 
-     new UrlEncodedFormEntity(toJavaList(formParams), "UTF-8")
+    new UrlEncodedFormEntity(toJavaList(formParams), "UTF-8")
 
   }
 
