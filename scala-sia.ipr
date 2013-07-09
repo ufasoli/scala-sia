@@ -251,26 +251,26 @@
     </library>
     <library name="scala-compiler">
       <CLASSES>
-        <root url="jar://C:/Program Files (x86)/scala/lib/scala-compiler.jar!/" />
-        <root url="jar://C:/Program Files (x86)/scala/lib/scala-library.jar!/" />
-        <root url="jar://C:/Program Files (x86)/scala/lib/scala-reflect.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/lib/scala-compiler.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/lib/scala-library.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/lib/scala-reflect.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
     <library name="scala-library">
       <CLASSES>
-        <root url="jar://C:/Program Files (x86)/scala/lib/scala-library.jar!/" />
-        <root url="jar://C:/Program Files (x86)/scala/lib/scala-swing.jar!/" />
-        <root url="jar://C:/Program Files (x86)/scala/lib/scala-actors.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/lib/scala-library.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/lib/scala-swing.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/lib/scala-actors.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="file://C:/Program Files (x86)/scala/doc/scala-devel-docs/api" />
+        <root url="file:///opt/local/share/scala-2.10/doc/scala-devel-docs/api" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://C:/Program Files (x86)/scala/src/scala-library-src.jar!/" />
-        <root url="jar://C:/Program Files (x86)/scala/src/scala-swing-src.jar!/" />
-        <root url="jar://C:/Program Files (x86)/scala/src/scala-actors-src.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/src/scala-library-src.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/src/scala-swing-src.jar!/" />
+        <root url="jar:///opt/local/share/scala-2.10/src/scala-actors-src.jar!/" />
       </SOURCES>
     </library>
   </component>
