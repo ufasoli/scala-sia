@@ -35,12 +35,12 @@ object ArraysAndList{
     val newList2 = oldList :+ 3
     newList2.foreach(println)
 
-    // using the Nil object to create List
+    // using the Nil obj to create List
     val myList2 = "This" :: "is" :: "immutable" :: Nil
     myList2.foreach(println)
 
 
-    // delete the 3rd element from the newList2 object
+    // delete the 3rd element from the newList2 obj
     val afterDelete = newList2.filterNot(_ ==3)
     afterDelete.foreach(println)
 

@@ -8,5 +8,5 @@ package com.ufasoli.sia.ch3.factory.pattern
  * project : scala-sia
  */
 class Analyst extends Role{
-  def canAccess(page: String): Boolean = false
+  override def canAccess(page: String): Boolean = false
 }

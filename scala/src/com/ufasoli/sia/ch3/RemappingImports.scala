@@ -1,9 +1,9 @@
 package com.ufasoli.sia.ch3
 
 import java.util.Date
-// remaps the Date object to SqlDate
+// remaps the Date obj to SqlDate
 import java.sql.{Date => SqlDate}
-// hides the Array object in the file
+// hides the Array obj in the file
 import java.sql.{Array => _}
 
 

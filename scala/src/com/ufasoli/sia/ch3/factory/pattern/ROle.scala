@@ -12,3 +12,12 @@ abstract  class Role {
   def canAccess(page:String): Boolean
 
 }
+
+object Role{
+
+  def apply(roleName:String )= roleName match{
+    case "Analyst" => new Analyst
+    case "superAnalyst" => new SuperAnalyst
+    case "root" => new Root
+  }
+}
