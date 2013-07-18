@@ -55,7 +55,7 @@ class MongoClient(val host: String, val port: Int) {
    */
   def inlineImport() {
     val randomValue = {
-      // In this case you’re importing the Random class defined in the scala.util package in
+      // In this cas you’re importing the Random class defined in the scala.util package in
       // the Scala code block, and it’s lexically scoped inside the block and won’t be available
       // outside it.
 

@@ -235,9 +235,7 @@
         <root url="jar://$SCALA_HOME$/lib/scala-swing.jar!/" />
         <root url="jar://$SCALA_HOME$/lib/scala-actors.jar!/" />
       </CLASSES>
-      <JAVADOC>
-        <root url="file://$SCALA_HOME$/doc/scala-devel-docs/api" />
-      </JAVADOC>
+      <JAVADOC />
       <SOURCES>
         <root url="jar://$SCALA_HOME$/src/scala-library-src.jar!/" />
         <root url="jar://$SCALA_HOME$/src/scala-swing-src.jar!/" />

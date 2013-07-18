@@ -1,7 +1,7 @@
 package com.ufasoli.sia.ch3
 
 import com.ufasoli.sia.ch3.traits.{Updatable, Administrable, ReadOnly}
-import com.mongodb.{DBCollection => MongoDBCollection }
+import com.mongodb.{DBCollection => MongoDBCollection, DBObject}
 
 /**
  *
@@ -12,6 +12,7 @@ import com.mongodb.{DBCollection => MongoDBCollection }
  */
 // note override param that indicates that we are overriding the ReadOnly underlying param
 class DBCollection(override val underlying: MongoDBCollection) extends ReadOnly{
+
 
 
 }

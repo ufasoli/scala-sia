@@ -2,7 +2,7 @@ package com.ufasoli.sia.ch3
 
 import com.mongodb.{DB => MongoDB}
 import scala.collection.convert.Wrappers.JSetWrapper
-import com.ufasoli.sia.ch3.traits.{Memoizer, Updatable, Administrable}
+import com.ufasoli.sia.ch3.traits.{LocalAware, Memoizer, Updatable, Administrable}
 
 /**
  *
@@ -21,11 +21,11 @@ class DB private(val underlying:MongoDB) {
 
   private def collection(name:String) = underlying.getCollection(name)
 
-  def readOnlyCollection(name:String) = new DBCollection(collection(name)) with Memoizer
+  def readOnlyCollection(name:String) = new DBCollection(collection(name)) with Memoizer  with LocalAware
 
-  def administrableCollection(name:String) = new DBCollection(collection(name)) with Administrable with Memoizer
+  def administrableCollection(name:String) = new DBCollection(collection(name)) with Administrable with Memoizer with LocalAware
 
-  def updatableCollection(name:String) = new DBCollection(collection(name)) with Updatable with Memoizer
+  def updatableCollection(name:String) = new DBCollection(collection(name)) with Updatable with Memoizer  with LocalAware
 
 }
 

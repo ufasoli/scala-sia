@@ -1,6 +1,8 @@
 package com.ufasoli.sia.ch3.traits
 
 import com.mongodb.{DBCollection => MongoDBCollection, DBObject}
+import com.ufasoli.sia.ch3.cas.Query
+
 /**
  *
  * User: ufasoli
@@ -20,5 +22,7 @@ trait ReadOnly {
   def findOne = underlying findOne
   def findOne(doc:DBObject) = underlying findOne doc
   def getCount(doc:DBObject) = underlying getCount doc
+
+  def find(query:Query)
 
 }

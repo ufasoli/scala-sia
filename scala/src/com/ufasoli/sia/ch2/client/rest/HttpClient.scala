@@ -132,7 +132,7 @@ object HttpClient {
     // and creates a list of name-value pairs of request or header parameters.
     // The return type is a scala.Tuple2, a tuple  of two elements.
     // Tuple is immutable like List, but unlike List it can contain different types of elements;
-    // in this case, it contains a String and a List.
+    // in this cas, it contains a String and a List.
     // Scala provides syntax sugar for creating a Tuple by wrapping elements with parentheses ():
     // eg :
     // val tuple2 = ("list of one element", List(1)) => tuple2: (java.lang.String, List[Int]) = (list of one element,List(1))

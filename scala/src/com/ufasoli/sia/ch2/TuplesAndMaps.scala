@@ -12,7 +12,7 @@ object TuplesAndMaps{
 
 
 //    Tuple is immutable like List, but unlike List it can contain different types of elements;
-//    in this case, it contains a String and a List. Scala provides syntax sugar
+//    in this cas, it contains a String and a List. Scala provides syntax sugar
 //    for creating a Tuple by wrapping elements with parentheses ():
     val tuple2  = Tuple2("1", List(1))
     val tuple3 = Tuple3("1",  List(1), 5)
