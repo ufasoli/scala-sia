@@ -1,4 +1,4 @@
-import com.ufasoli.sia.ch3.cas.Person
+import com.ufasoli.sia.ch3.cas.{Query, Person}
 import com.ufasoli.sia.ch3.traits.Administrable
 import com.ufasoli.sia.ch3.{DBCollection, DB, MongoClient, Address}
 import com.ufasoli.sia.ch3.factory.pattern.Role
@@ -30,6 +30,8 @@ object CH3 {
     mongoQuickTour()
 
     caseClasses()
+
+    mongoRequestWithQuery()
   }
 
   def printMongoCollections() {
@@ -96,10 +98,41 @@ object CH3 {
 
     println("Me equals myself ? : " + me.equals(myself))
 
-    println("me.hashCode : "+ me.hashCode())
+    println("me.hashCode : " + me.hashCode())
     println("myself.hashCode : " + myself.hashCode())
     println("me.toString : " + me)
     println("myself.toString : " + myself)
+
+  }
+
+  def mongoRequestWithQuery() {
+
+    val client = mongoClient()
+    val db = client.db("sia")
+
+    val col = db.readOnlyCollection("test")
+
+    val writecol = db.updatableCollection("test")
+
+    for(i <- 1 to 100 ) writecol += new BasicDBObject("i", i)
+
+    val rangeQuery = new BasicDBObject("i", new BasicDBObject("$gt", 20))
+    val richQuery = Query(rangeQuery).skip(20).limit(10)
+
+    val result = col.find(richQuery)
+    println("*****************")
+    println("mongoRequestWithQuery")
+    println("*****************")
+    while (result.hasNext) {
+      println(result.next())
+    }
+
+
+  }
+
+  def mongoClient() = {
+    new MongoClient("mongo-local", 27017)
+
 
   }
 
