@@ -1,5 +1,5 @@
 import com.ufasoli.sia.ch3.cas.{Query, Person}
-import com.ufasoli.sia.ch3.traits.Administrable
+import com.ufasoli.sia.ch3.traits.{PersonTrait, SalesPerson, Administrable}
 import com.ufasoli.sia.ch3.{DBCollection, DB, MongoClient, Address}
 import com.ufasoli.sia.ch3.factory.pattern.Role
 import com.mongodb.{DBCollection => MongoDBCollection, BasicDBObject}
@@ -32,6 +32,8 @@ object CH3 {
     caseClasses()
 
     mongoRequestWithQuery()
+
+    namedParameters()
   }
 
   def printMongoCollections() {
@@ -135,6 +137,48 @@ object CH3 {
 
 
   }
+
+  def namedParameters(){
+    println("****************")
+    println("NAMED PARAMETERS")
+    println("****************")
+    val p = new Person(lastName = "Fasoli", firstName = "Ulises")
+
+    println(p)
+
+    // you can mix and match named and unnamed arguments but it's not
+    // a good practice
+    val p2 = new Person("Ulises", lastName = "Fasoli" )
+
+    println(p2)
+
+    println("****************")
+    println("NAMED with Inheritance and Override")
+    println("****************")
+
+    val s = new SalesPerson
+    s.grade(yrs=1)
+
+    // the following will not compile as the subclass SalesPerson redefines
+    // the integer value with the name yrs
+//    s.grade(years=1)
+
+
+    // the following will work because we are
+    // forcing the type of s2 to PersonTrait and not SalesPerson
+
+     val s2:PersonTrait = new SalesPerson
+    println(s2.grade(years = 1))
+
+
+    val s3 = new SalesPerson
+    // the value of the named argument can also be a block
+    println("Te following is a calculated value for a named variable")
+    println(s3.grade(yrs={val x=10; x+1}))
+
+  }
+
+
 
 
 }
