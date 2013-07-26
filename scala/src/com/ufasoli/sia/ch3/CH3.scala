@@ -1,5 +1,8 @@
+import com.ufasoli.sia.ch3.cas.Person
+import com.ufasoli.sia.ch3.cas.Query
 import com.ufasoli.sia.ch3.cas.{Query, Person}
-import com.ufasoli.sia.ch3.traits.{PersonTrait, SalesPerson, Administrable}
+import com.ufasoli.sia.ch3.implicit_conversions.RangeMaker
+import com.ufasoli.sia.ch3.traits._
 import com.ufasoli.sia.ch3.{DBCollection, DB, MongoClient, Address}
 import com.ufasoli.sia.ch3.factory.pattern.Role
 import com.mongodb.{DBCollection => MongoDBCollection, BasicDBObject}
@@ -34,6 +37,8 @@ object CH3 {
     mongoRequestWithQuery()
 
     namedParameters()
+
+    implicitConversions()
   }
 
   def printMongoCollections() {
@@ -178,7 +183,49 @@ object CH3 {
 
   }
 
+  /**
+   * each class has inherits a copy method
+   * that allows for easily copying classes
+   */
+  def copyMethod(){
+
+    val skipOption = Skip(10, NoOption)
+
+    // here we are using the copy method to create a copy of the
+    // class while at the same time overriding the value for the anotherOption variable
+    val skipWithLimit = skipOption.copy(anotherOption = Limit(10, NoOption))
+
+    println(skipWithLimit)
+
+    // here we will create an exact copy of the class
+    val skipWithLimitDefault = skipWithLimit.copy()
+
+    // in Scala using the == operand is the same as invoking equals in java
+    println(skipWithLimit == skipWithLimitDefault)
+  }
 
 
+      def implicitConversions(){
+        // will not compile until we define a method with the implicit keyword
+        //val someInt : Int = 2.3
 
+        val someInt : Int = 2.3
+
+        //this will be translated through explicit conversion to :
+        // int2RangeMaker(1).-->(10)
+        println(1 --> 10)
+      }
+
+
+   // implicit conversion from doulbe to int
+   implicit def double2Int(d:Double):Int = d.toInt
+
+
+//  implicit def int2RangeMaker(left:Int): RangeMaker = new RangeMaker(left)
+
+  implicit class RangeMaker2(left:Int) {
+
+    def --> (right:Int): Range = left to right
+
+  }
 }
