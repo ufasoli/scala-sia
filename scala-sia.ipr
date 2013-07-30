@@ -220,28 +220,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/6.0/javaee-web-api-6.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="scala-compiler">
-      <CLASSES>
-        <root url="jar://$SCALA_HOME$/lib/scala-compiler.jar!/" />
-        <root url="jar://$SCALA_HOME$/lib/scala-library.jar!/" />
-        <root url="jar://$SCALA_HOME$/lib/scala-reflect.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="scala-library">
-      <CLASSES>
-        <root url="jar://$SCALA_HOME$/lib/scala-library.jar!/" />
-        <root url="jar://$SCALA_HOME$/lib/scala-swing.jar!/" />
-        <root url="jar://$SCALA_HOME$/lib/scala-actors.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$SCALA_HOME$/src/scala-library-src.jar!/" />
-        <root url="jar://$SCALA_HOME$/src/scala-swing-src.jar!/" />
-        <root url="jar://$SCALA_HOME$/src/scala-actors-src.jar!/" />
-      </SOURCES>
-    </library>
   </component>
 </project>
 

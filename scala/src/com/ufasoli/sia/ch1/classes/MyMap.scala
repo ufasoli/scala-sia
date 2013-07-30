@@ -14,8 +14,8 @@ class MyMap extends Dynamic {
   /**
    * this method will be called automatically
    * when an unknown method of the MyMapClass is invoked
-   * @param fieldName  the name of the map key
-   * @return the value associated with the map key or None if the key doesn't exists
+   * @param fieldName  the name of the mapRecursive key
+   * @return the value associated with the mapRecursive key or None if the key doesn't exists
    */
   def selectDynamic(fieldName: String) = map.get(fieldName)
 
