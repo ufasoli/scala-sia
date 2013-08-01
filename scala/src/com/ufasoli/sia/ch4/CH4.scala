@@ -32,8 +32,26 @@ object CH4 {
     higherOrderFunctions()
 
 
+    // will create a new list with every character of the strings
+    //will print : List[Char] = List(o, n, e, t, w, o, t, h, r, e, e)
+    println(List("one", "two", "three", "") flatMap {
+      _.toList
+    })
+
+    // will create a list of lists
+    //  List[List[Char]] = List(List(o, n, e), List(t, w, o), List(t, h, r, e, e), List())
+    println(List("one", "two", "three", "") map {
+      _.toList
+    })
+
+
+    //Using custom flatMap implementation
+    println("CUSTOM FLATMAP : " + flatMap(List("one", "two", "three")) {
+      _.toList
+    })
+
     // will throw exception
-    println(position2(List(), "a").get)
+    //    println(position2(List(), "a").get)
   }
 
 
@@ -69,7 +87,7 @@ object CH4 {
     val myList4 = List(1, 2, 3) map addOneF
     println(myList4)
 
-    println("Map Recursive :" + mapRecursive(List(1,2,3), addOne))
+    println("Map Recursive :" + mapRecursive(List(1, 2, 3), addOne))
   }
 
   def addOne(num: Int) = num + 1
@@ -115,6 +133,71 @@ object CH4 {
     }
   }
 
-  def mapForComprehension[A,B](f: A => B, xs:List[A]) : List[B] = for(x <- xs ) yield f(x)
+  def mapForComprehension[A, B](f: A => B, xs: List[A]): List[B] = for (x <- xs) yield f(x)
+
+
+  //example of flatMap implementation
+  def flatten[B](xss: List[List[B]]): List[B] = {
+    xss match {
+      case List() => Nil
+      // ::: --> appends the content of a List to another
+      case head :: tail => head ::: flatten(tail)
+    }
+  }
+
+  // this function is declared with 2 sets of params (currying)
+  def flatMap[A, B](xs: List[A])(f: A => List[B]): List[B] = {
+    flatten(mapRecursive(xs, f))
+  }
+
+
+  // A lambda is an anonymous function a function without a name. You’ve already seen
+  //some examples of it. Closure is any function that closes over the environment in
+  //which it’s defined.
+  def closuresAndLambdas() {
+
+    // lambda
+    List(100, 200, 300) map {
+      _ * 10 / 100
+    }
+
+    //closure( uses variables from it's environment (percentage))
+    var percentage = 10
+    val applyPercentage = (amount: Int) => amount * percentage / 100
+    percentage = 20
+    List(100, 200, 300) map applyPercentage
+  }
+
+  //Reimplementing flattmap without recursion
+  //  The downside of using a recursive solution is that it can throw a stack overflow
+  //  error on large datasets. An alternative is to implement the function using tail recursion
+  //    so that the Scala compiler could do tail call optimization and transform the
+  //    recursion into a loop. In tail recursion you perform your calculation first and then
+  //    execute the recursive call by passing the result of the current step to the next step.
+  //  Here’s the implementation of the flatten function using tail recursion.
+
+  //  In this case the flatten function is implemented using a nested function that uses the
+  //    tail recursion pattern. The result of newList ::: head is passed as a parameter to the
+  //  function so that the Scala compiler can optimize it. You’ll learn more about tail call
+  //    recursion in the next chapter. In the next section you’ll explore another new concept
+  //  called fold that allows you to process a data structure in some order and build a return
+  //  value.
+  def flatten3[B](xss: List[List[B]]): List[B] = {
+    def _flatten3(oldList: List[List[B]], newList: List[B]): List[B] = {
+      oldList match {
+        case List() => newList
+        case head :: tail => _flatten3(tail, newList ::: head)
+      }
+
+    }
+    _flatten3(xss, Nil)
+  }
+
+  def folds(){
+//    def foldLeft[B](z: B)(f: (B, A) => B): B
+//    def foldRight[B](z: B)(f: (A, B) => B): B
+
+
+  }
 }
 
