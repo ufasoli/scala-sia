@@ -49,7 +49,8 @@ object CH4 {
     println("CUSTOM FLATMAP : " + flatMap(List("one", "two", "three")) {
       _.toList
     })
-
+    folds()
+    customFunctionObjects()
     // will throw exception
     //    println(position2(List(), "a").get)
   }
@@ -194,10 +195,53 @@ object CH4 {
   }
 
   def folds(){
+    // using foldLeft to calculate the sum of a list
+    println("Calculating sum of list List(1,2,3,4) : " +List(1,2,3,4).foldLeft(0) { _ + _})
+    // alternative syntax for calculating sum of list
+    println("Alternative Calculating sum of list List(1,2,3,4) : " +List(1,2,3,4).foldLeft(0) {
+        (a,b) => println("a:"+ a + "b:"+b);   a +b})
+
+    println("Calculating length of list List(1,2,3,4) : " +List(1,2,3,4).foldLeft(0) { (a,b) => println("a:" + a +"b :"+ b ); a+1})
+
+
+    // checking where an element exists
+
+    def exists[A](xs:List[A], e:A) = xs.foldLeft(false)((a,x) => a || x==e)
+
+    println("Checking if 3 exists in List : "  + exists(List(1,2,3), 3))
+
 //    def foldLeft[B](z: B)(f: (B, A) => B): B
 //    def foldRight[B](z: B)(f: (A, B) => B): B
 
 
+  }
+
+  def customFunctionObjects(){
+
+    object folddl{
+      // note when an operator ends with ':' here '/:' right associativeness is used (
+      def apply[A,B](xs:Traversable[A], defaultValue: B)(op: (B,A) => B)=(defaultValue /: xs)(op)
+    }
+
+
+
+    println(folddl(List("1","2","3"), "0") {_+_})
+    println(folddl(IndexedSeq("1","2","3"), "0") {_+_})
+    println(folddl(Set("1","2","3"), "0") {_+_})
+
+
+    // THE ++ exercise
+
+    // it's a good practice to extend the FunctionN when creating a function object
+    object ++ extends Function1[Int, Int]{
+      def apply(p:Int):Int = p+1
+    }
+
+    println(mapForComprehension(++, List(10,20,30)))
+
+    println(mapForComprehension((x:Int) => x+1, List(10,20,30) ))
+
+    println(mapForComprehension(new Function1[Int,Int]{ def apply(p:Int)={p+1}}, List(10,20,30) ))
   }
 }
 
