@@ -243,5 +243,19 @@ object CH4 {
 
     println(mapForComprehension(new Function1[Int,Int]{ def apply(p:Int)={p+1}}, List(10,20,30) ))
   }
+
+
+  def functionComposition(){
+
+    // combining functions
+    val addOne :Int => Int = x => x+1
+    val addTwo:Int => Int = x => x +2
+
+    // combining the 2 functions to obtain 1 function
+    // equivalent of val addThree : Int => Int = x => addOne(addTwo(x))
+    val addThree = addOne compose addTwo
+
+    print(addThree(3))
+  }
 }
 
