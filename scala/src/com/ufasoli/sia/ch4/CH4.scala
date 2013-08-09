@@ -1,4 +1,4 @@
-import com.ufasoli.sia.ch4.{Nill, Maybe, Just}
+import com.ufasoli.sia.ch4.{Collections, Nill, Maybe, Just}
 
 /**
  *
@@ -32,6 +32,11 @@ object CH4 {
     higherOrderFunctions()
 
 
+
+    val col = new Collections
+    col.collections()
+    col.javaWrapper()
+    col.iterable()
     // will create a new list with every character of the strings
     //will print : List[Char] = List(o, n, e, t, w, o, t, h, r, e, e)
     println(List("one", "two", "three", "") flatMap {
