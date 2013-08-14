@@ -194,7 +194,6 @@ object CH3 {
     // here we are using the copy method to create a copy of the
     // class while at the same time overriding the value for the anotherOption variable
     val skipWithLimit = skipOption.copy(anotherOption = Limit(10, NoOption))
-
     println(skipWithLimit)
 
     // here we will create an exact copy of the class

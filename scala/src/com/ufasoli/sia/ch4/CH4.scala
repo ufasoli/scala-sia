@@ -37,6 +37,10 @@ object CH4 {
     col.collections()
     col.javaWrapper()
     col.iterable()
+    col.partialFunctionWithDefaultUsingComposition()
+    col.listAndListBuffer()
+    col.setAndSortedSet()
+    col.mapAndTuples()
     // will create a new list with every character of the strings
     //will print : List[Char] = List(o, n, e, t, w, o, t, h, r, e, e)
     println(List("one", "two", "three", "") flatMap {
