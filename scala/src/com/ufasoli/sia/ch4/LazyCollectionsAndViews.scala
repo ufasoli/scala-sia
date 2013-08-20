@@ -98,16 +98,23 @@ class LazyCollectionsAndViews {
 
   def tweets(handle:String)= {
     println("processing tweets for : " + handle)
+    println("NOT ACTUALLY WORKING SINCE TWITTER API HAS CHANGED")
 
-    // get the XML result
-    val source = Source.fromURL(new java.net.URL("http://search.twitter.com/search.atom?q=" + handle))
+    try{
+      // get the XML result
+      val source = Source.fromURL(new java.net.URL("http://search.twitter.com/search.atom?q=" + handle))
 
-    val iterator = source.getLines()
-    val builder = new StringBuilder
-    for(line <- iterator) builder.append(line)
+      val iterator = source.getLines()
+      val builder = new StringBuilder
+      for(line <- iterator) builder.append(line)
 
-    // load string and convert into XML
-    XML.loadString(builder.toString)
+      // load string and convert into XML
+      XML.loadString(builder.toString)
+
+    }
+    catch{
+      case e:Exception => println(e)
+    }
 
 
 
