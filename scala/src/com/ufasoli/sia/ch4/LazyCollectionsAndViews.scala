@@ -91,7 +91,7 @@ class LazyCollectionsAndViews {
     )
 
 
-    allTweetsLazily.view.map { t => t._2(t._1).head}
+    allTweetsLazily.view.map { t => t._2(t._1)}
 
     for(t <- allTweetsLazily; if t._1 == "ManningBooks") t._2(t._1)
   }

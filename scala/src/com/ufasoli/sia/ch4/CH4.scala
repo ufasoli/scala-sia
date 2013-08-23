@@ -48,6 +48,11 @@ object CH4 {
     val lcolsAndViews = new LazyCollectionsAndViews
     lcolsAndViews.loadTweets()
 
+
+
+    val pCollections = new ParallelCollections
+    pCollections.parallelCollection()
+    pCollections.fromSeqToParallel
     // will create a new list with every character of the strings
     //will print : List[Char] = List(o, n, e, t, w, o, t, h, r, e, e)
     println(List("one", "two", "three", "") flatMap {
