@@ -63,6 +63,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="scala-library" level="application" />
+    <orderEntry type="library" name="scala-library" level="application" />
   </component>
 </module>
 
