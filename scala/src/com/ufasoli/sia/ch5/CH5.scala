@@ -1,4 +1,3 @@
-import com.ufasoli.sia.ch5.http.server.Resource
 import com.ufasoli.sia.ch5.{BTaxStrategy, ATaxStrategy, TaxStrategy}
 
 /**
