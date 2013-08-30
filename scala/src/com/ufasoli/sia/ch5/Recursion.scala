@@ -16,6 +16,9 @@ object Recursion {
     println(imperativeSum(List(1, 2, 3, 4)))
     println(recursiveSum(List(1, 2, 3, 4)))
     println(thinkingRecursively(List("A", "B", "C", "A", "D", "B")))
+
+
+
   }
 
 
