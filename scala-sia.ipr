@@ -200,6 +200,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala/scala.iml" filepath="$PROJECT_DIR$/scala/scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scala-sbt/scala-sbt.iml" filepath="$PROJECT_DIR$/scala-sbt/scala-sbt.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
@@ -209,16 +210,21 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
-    <library name="Maven: javax:javaee-web-api:6.0">
+    <library name="scala-compiler">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/6.0/javaee-web-api-6.0.jar!/" />
+        <root url="jar://C:/Program Files (x86)/scala/lib/scala-compiler.jar!/" />
+        <root url="jar://C:/Program Files (x86)/scala/lib/scala-library.jar!/" />
       </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/6.0/javaee-web-api-6.0-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/6.0/javaee-web-api-6.0-sources.jar!/" />
-      </SOURCES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="scala-library">
+      <CLASSES>
+        <root url="jar://C:/Program Files (x86)/scala/lib/scala-library.jar!/" />
+        <root url="jar://C:/Program Files (x86)/scala/lib/scala-swing.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
     </library>
   </component>
 </project>
