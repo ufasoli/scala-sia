@@ -200,16 +200,133 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/scala/scala.iml" filepath="$PROJECT_DIR$/scala/scala.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scala-sbt/scala-sbt.iml" filepath="$PROJECT_DIR$/scala-sbt/scala-sbt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weKanban/weKanban.iml" filepath="$PROJECT_DIR$/weKanban/weKanban.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weKanban/project/weKanban-build.iml" filepath="$PROJECT_DIR$/weKanban/project/weKanban-build.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="SbtSettings">
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/scala-sbt" />
+        <option name="useAutoImport" value="true" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/weKanban" />
+        <option name="useAutoImport" value="true" />
+      </SbtProjectSettings>
+    </option>
+  </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="" vcs="" />
   </component>
   <component name="libraryTable">
+    <library name="SBT: javax.servlet:servlet-api:2.5">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/javax.servlet/servlet-api/jars/servlet-api-2.5.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/javax.servlet/servlet-api/srcs/servlet-api-2.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.mortbay.jetty:jetty-util:6.1.22">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty-util/jars/jetty-util-6.1.22.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty-util/srcs/jetty-util-6.1.22-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.mortbay.jetty:jetty:6.1.22">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty/jars/jetty-6.1.22.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty/srcs/jetty-6.1.22-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.mortbay.jetty:servlet-api:2.5-20081211">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/servlet-api/jars/servlet-api-2.5-20081211.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/servlet-api/docs/servlet-api-2.5-20081211-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/servlet-api/srcs/servlet-api-2.5-20081211-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.scala-lang:scala-library:2.10.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.10.0/lib/scala-library.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.10.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.scala-lang:scala-library:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/lib/scala-library.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="SBT: org.scala-tools.testing:specs:1.6.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-tools.testing/specs/jars/specs-1.6.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-tools.testing/specs/srcs/specs-1.6.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.scalaz:scalaz-core_2.10:6.0.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-core_2.10/jars/scalaz-core_2.10-6.0.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-core_2.10/docs/scalaz-core_2.10-6.0.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-core_2.10/srcs/scalaz-core_2.10-6.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.scalaz:scalaz-http_2.10:6.0.3">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-http_2.10/jars/scalaz-http_2.10-6.0.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-http_2.10/docs/scalaz-http_2.10-6.0.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-http_2.10/srcs/scalaz-http_2.10-6.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: scala-compiler:2.10.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.10.0/lib/scala-compiler.jar!/" />
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.10.0/lib/scala-library.jar!/" />
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.10.0/lib/scala-reflect.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="SBT: scala-compiler:2.9.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/lib/scala-library.jar!/" />
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.9.2/lib/scala-compiler.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="scala-compiler">
       <CLASSES>
         <root url="jar://C:/Program Files (x86)/scala/lib/scala-compiler.jar!/" />
