@@ -210,25 +210,44 @@
   <component name="SbtSettings">
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/scala-sbt" />
-        <option name="useAutoImport" value="true" />
-      </SbtProjectSettings>
-      <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/weKanban" />
         <option name="useAutoImport" value="true" />
       </SbtProjectSettings>
     </option>
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="" vcs="Git" />
   </component>
   <component name="libraryTable">
+    <library name="SBT: cglib:cglib-nodep:2.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/cglib/cglib-nodep/jars/cglib-nodep-2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/cglib/cglib-nodep/docs/cglib-nodep-2.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/cglib/cglib-nodep/srcs/cglib-nodep-2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: com.h2database:h2:1.2.137">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/com.h2database/h2/jars/h2-1.2.137.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/com.h2database/h2/docs/h2-1.2.137-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/com.h2database/h2/srcs/h2-1.2.137-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="SBT: javax.servlet:servlet-api:2.5">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/javax.servlet/servlet-api/jars/servlet-api-2.5.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/javax.servlet/servlet-api/srcs/servlet-api-2.5-sources.jar!/" />
         <root url="jar://$USER_HOME$/.ivy2/cache/javax.servlet/servlet-api/srcs/servlet-api-2.5-sources.jar!/" />
       </SOURCES>
     </library>
@@ -239,6 +258,7 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty-util/srcs/jetty-util-6.1.22-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty-util/srcs/jetty-util-6.1.22-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="SBT: org.mortbay.jetty:jetty:6.1.22">
@@ -248,6 +268,7 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty/srcs/jetty-6.1.22-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/jetty/srcs/jetty-6.1.22-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="SBT: org.mortbay.jetty:servlet-api:2.5-20081211">
@@ -256,9 +277,22 @@
       </CLASSES>
       <JAVADOC>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/servlet-api/docs/servlet-api-2.5-20081211-javadoc.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/servlet-api/docs/servlet-api-2.5-20081211-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/servlet-api/srcs/servlet-api-2.5-20081211-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.mortbay.jetty/servlet-api/srcs/servlet-api-2.5-20081211-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.scala-lang:scala-compiler:2.10.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.sbt/boot/scala-2.10.0/lib/scala-compiler.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-compiler/docs/scala-compiler-2.10.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-compiler/srcs/scala-compiler-2.10.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="SBT: org.scala-lang:scala-library:2.10.0">
@@ -267,8 +301,10 @@
       </CLASSES>
       <JAVADOC>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.10.0-javadoc.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.10.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.0-sources.jar!/" />
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.0-sources.jar!/" />
       </SOURCES>
     </library>
@@ -279,12 +315,35 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="SBT: org.scala-lang:scala-reflect:2.10.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/docs/scala-reflect-2.10.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.10.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.scala-lang:scalap:2.10.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.10.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scalap/docs/scalap-2.10.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scalap/srcs/scalap-2.10.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="SBT: org.scala-tools.testing:specs:1.6.2">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-tools.testing/specs/jars/specs-1.6.2.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-tools.testing/specs/srcs/specs-1.6.2-sources.jar!/" />
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-tools.testing/specs/srcs/specs-1.6.2-sources.jar!/" />
       </SOURCES>
     </library>
@@ -294,8 +353,10 @@
       </CLASSES>
       <JAVADOC>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-core_2.10/docs/scalaz-core_2.10-6.0.3-javadoc.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-core_2.10/docs/scalaz-core_2.10-6.0.3-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-core_2.10/srcs/scalaz-core_2.10-6.0.3-sources.jar!/" />
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-core_2.10/srcs/scalaz-core_2.10-6.0.3-sources.jar!/" />
       </SOURCES>
     </library>
@@ -305,9 +366,22 @@
       </CLASSES>
       <JAVADOC>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-http_2.10/docs/scalaz-http_2.10-6.0.3-javadoc.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-http_2.10/docs/scalaz-http_2.10-6.0.3-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-http_2.10/srcs/scalaz-http_2.10-6.0.3-sources.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scalaz/scalaz-http_2.10/srcs/scalaz-http_2.10-6.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="SBT: org.squeryl:squeryl_2.10:0.9.5-6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.squeryl/squeryl_2.10/jars/squeryl_2.10-0.9.5-6.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.squeryl/squeryl_2.10/docs/squeryl_2.10-0.9.5-6-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.squeryl/squeryl_2.10/srcs/squeryl_2.10-0.9.5-6-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="SBT: scala-compiler:2.10.0">
@@ -339,6 +413,8 @@
       <CLASSES>
         <root url="jar://C:/Program Files (x86)/scala/lib/scala-library.jar!/" />
         <root url="jar://C:/Program Files (x86)/scala/lib/scala-swing.jar!/" />
+        <root url="jar://C:/Program Files (x86)/scala/lib/scala-compiler.jar!/" />
+        <root url="jar://C:/Program Files (x86)/scala/lib/scala-reflect.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
